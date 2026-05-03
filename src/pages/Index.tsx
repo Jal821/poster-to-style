@@ -63,7 +63,7 @@ const Index = () => {
 
         <nav className="relative max-w-6xl mx-auto px-6 pt-8 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <MountainBadge size={44} />
+            <MountainBadge size={64} />
             <span className="font-display text-spaced text-sm uppercase">​</span>
           </div>
           <ul className="flex items-center gap-1 md:gap-2 font-display text-spaced uppercase text-sm md:text-base font-semibold rounded-full border border-primary-glow/30 bg-background-deep/60 backdrop-blur-md px-2 py-1.5 shadow-[var(--shadow-soft)]">
