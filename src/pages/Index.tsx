@@ -1,4 +1,5 @@
-import { Mountain, Music, ExternalLink, Disc3 } from "lucide-react";
+import { Music, ExternalLink, Disc3 } from "lucide-react";
+import logo from "@/assets/logo.webp";
 import member1 from "@/assets/member-1.jpg";
 import member2 from "@/assets/member-2.jpg";
 import member3 from "@/assets/member-3.jpg";
@@ -20,12 +21,14 @@ const albums = [
 ];
 
 const MountainBadge = ({ size = 80 }: { size?: number }) => (
-  <div
-    className="rounded-full flex items-center justify-center pill-teal shrink-0"
+  <img
+    src={logo}
+    alt="Ecce Jazz Band logo"
+    width={size}
+    height={size}
+    className="shrink-0 object-contain"
     style={{ width: size, height: size }}
-  >
-    <Mountain className="text-foreground" size={size * 0.45} strokeWidth={1.2} />
-  </div>
+  />
 );
 
 const Index = () => {
