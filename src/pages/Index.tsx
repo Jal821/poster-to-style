@@ -7,7 +7,7 @@ import elenaBodnarova from "@/assets/elena-bodnarova.webp";
 import peterSolarik from "@/assets/peter-solarik.webp";
 
 const members = [
-  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar },
+  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "center" },
   { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
   { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
   { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova },
@@ -171,7 +171,8 @@ const Index = () => {
                     width={512}
                     height={768}
                     loading="lazy"
-                    className="w-full h-full object-cover object-top skew-y-[8deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
+                    style={{ objectPosition: (m as any).position ?? "top" }}
+                    className="w-full h-full object-cover skew-y-[8deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
                   />
                 </div>
                 <p className="font-display text-spaced uppercase text-sm leading-tight">
