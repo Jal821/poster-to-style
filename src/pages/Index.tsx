@@ -68,11 +68,11 @@ const Index = () => {
           </ul>
         </nav>
 
-        <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-32 text-center">
+        <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-32 text-center bg-inherit">
           <p className="font-display italic text-primary-glow mb-6 tracking-widest text-sm uppercase">
             &nbsp;
           </p>
-          <h1 className="font-display text-spaced text-5xl sm:text-7xl md:text-8xl leading-[1.05] font-bold text-center border-8 my-[10px] mx-[10px] px-[10px] py-[10px] bg-primary border-secondary border-solid shadow opacity-100 rounded-full">
+          <h1 className="font-display text-spaced text-5xl sm:text-7xl md:text-8xl leading-[1.05] font-bold text-center border-8 px-[10px] py-[10px] border-secondary border-solid shadow opacity-100 rounded-full bg-primary pl-[20px] pt-[20px] pr-[20px] pb-[20px] my-0 mx-px mr-[50px] mb-[50px] ml-[50px] mt-[50px]">
             ECCE JAZZ
             <br />
             BAND
