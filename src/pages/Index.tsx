@@ -173,7 +173,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">​</p>
-            <h2 className="font-display text-spaced text-4xl md:text-5xl mt-0">ČLENOVIA</h2>
+            <h2 className="font-display text-spaced text-4xl md:text-5xl mt-0 text-center">ČLENOVIA</h2>
           </div>
 
           <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-2 items-start">
