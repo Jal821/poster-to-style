@@ -190,12 +190,12 @@ const Index = () => {
                     className="w-full h-full object-cover skew-x-[14deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
                   />
                 </div>
-                <p className="font-display text-spaced uppercase text-sm leading-tight">
+                <p className="font-display text-spaced uppercase text-sm leading-tight -translate-x-3">
                   {m.name.split(" ").map((part, i) => (
                     <span key={i} className="block">{part}</span>
                   ))}
                 </p>
-                <p className="font-display italic text-xs text-muted-foreground mt-2">{m.role}</p>
+                <p className="font-display italic text-xs text-muted-foreground mt-2 -translate-x-3">{m.role}</p>
               </li>
             ))}
           </ul>
