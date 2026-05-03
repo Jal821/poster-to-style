@@ -252,7 +252,7 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border/50 py-14 bg-primary">
+      <footer className="border-t border-border/50 py-14 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <MountainBadge size={48} />
