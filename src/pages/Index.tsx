@@ -117,7 +117,7 @@ const Index = () => {
             alt="Ecce Jazz Band logo"
             className="shrink-0 object-contain h-full w-auto self-stretch max-h-[420px] mb-0 pb-0 pt-0 mt-[50px]"
           />
-          <div className="space-y-8 font-body text-lg leading-relaxed text-foreground/95">
+          <div className="space-y-8 font-body text-lg leading-relaxed text-foreground/95 my-[50px] mb-0 mt-[80px]">
             <p>
               Základom pre názov hudobnej skupiny je album <em className="font-display not-italic font-semibold">Ecce Jazz</em> skladateľa
               a klaviristu <strong className="font-semibold">Pavla Bodnára</strong>, ktorý v roku 2006 získal cenu <em className="text-primary-glow not-italic">Aurel</em> ako
