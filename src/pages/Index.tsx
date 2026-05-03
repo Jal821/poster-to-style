@@ -49,6 +49,7 @@ const Index = () => {
           </div>
           <ul className="flex items-center gap-5 md:gap-8 font-display text-spaced uppercase text-xs md:text-sm">
             <li><a href="#top" className="hover:text-primary-glow transition-colors">Domov</a></li>
+            <li><a href="#kapela" className="hover:text-primary-glow transition-colors">O nás</a></li>
             <li><a href="#clenovia" className="hover:text-primary-glow transition-colors">Kapela</a></li>
             <li><a href="#diskografia" className="hover:text-primary-glow transition-colors">Nahrávky</a></li>
             <li><a href="#kontakt" className="hover:text-primary-glow transition-colors">Kontakt</a></li>
