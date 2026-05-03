@@ -106,12 +106,6 @@ const Index = () => {
             >
               Vypočuť ZAHORAMI
             </a>
-            <a
-              href="#kapela"
-              className="px-7 py-3 font-display text-spaced uppercase text-sm border border-foreground/30 rounded-full hover:border-foreground transition"
-            >
-              O kapele
-            </a>
           </div>
         </div>
       </header>
