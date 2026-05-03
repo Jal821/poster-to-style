@@ -70,7 +70,7 @@ const Index = () => {
             {[
               { href: "#top", label: "Domov" },
               { href: "#kapela", label: "O nás" },
-              { href: "#clenovia", label: "Kapela" },
+              { href: "#clenovia", label: "Členovia" },
               { href: "#podujatia", label: "Podujatia" },
               { href: "#kontakt", label: "Kontakt" },
             ].map((item) => (
