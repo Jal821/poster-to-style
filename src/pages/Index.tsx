@@ -7,7 +7,7 @@ import elenaBodnarova from "@/assets/elena-bodnarova.webp";
 import peterSolarik from "@/assets/peter-solarik.webp";
 
 const members = [
-  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "center" },
+  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "20% center" },
   { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
   { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
   { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova },
