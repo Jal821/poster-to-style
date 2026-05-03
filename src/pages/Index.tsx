@@ -235,7 +235,7 @@ const Index = () => {
       </section>
 
       {/* KONTAKT */}
-      <section id="kontakt" className="relative py-24">
+      <section id="kontakt" className="relative py-24 bg-primary">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">Spojte sa s nami</p>
           <h2 className="font-display text-spaced text-4xl md:text-5xl mb-10">KONTAKT</h2>
