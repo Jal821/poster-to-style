@@ -1,105 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Ecce Jazz Band palette */
+    --background: 217 38% 16%;          /* deep navy */
+    --background-deep: 217 45% 11%;      /* deeper navy */
+    --foreground: 36 33% 94%;            /* cream */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 217 40% 19%;
+    --card-foreground: 36 33% 94%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 217 40% 19%;
+    --popover-foreground: 36 33% 94%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 184 27% 34%;              /* teal/petrol */
+    --primary-foreground: 36 33% 94%;
+    --primary-glow: 184 30% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217 35% 24%;
+    --secondary-foreground: 36 33% 94%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 30% 26%;
+    --muted-foreground: 36 20% 75%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 184 27% 34%;
+    --accent-foreground: 36 33% 94%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 36 33% 94%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 30% 28%;
+    --input: 217 30% 28%;
+    --ring: 184 30% 45%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gradient-hero: linear-gradient(135deg, hsl(217 45% 11%) 0%, hsl(217 38% 18%) 50%, hsl(217 40% 14%) 100%);
+    --shadow-portrait: 0 20px 50px -15px hsl(217 60% 5% / 0.6);
+    --shadow-soft: 0 10px 40px -10px hsl(217 60% 5% / 0.5);
   }
 
+  /* Single theme — keep dark identical */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 217 38% 16%;
+    --foreground: 36 33% 94%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Lora', Georgia, serif;
+    font-feature-settings: "liga", "kern";
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+  .font-body { font-family: 'Lora', Georgia, serif; }
+
+  /* Diagonal layered background like the poster */
+  .poster-bg {
+    background:
+      linear-gradient(135deg, hsl(217 50% 12% / 0.7), transparent 60%),
+      linear-gradient(215deg, hsl(217 45% 22% / 0.55), transparent 55%),
+      linear-gradient(45deg, hsl(217 50% 14% / 0.6), transparent 50%),
+      var(--gradient-hero);
+  }
+
+  .diagonal-panel {
+    background: linear-gradient(115deg,
+      hsl(217 42% 14%) 0%,
+      hsl(217 38% 18%) 35%,
+      hsl(217 45% 12%) 70%,
+      hsl(217 40% 16%) 100%);
+  }
+
+  .text-spaced {
+    letter-spacing: 0.32em;
+  }
+
+  .pill-teal {
+    background: hsl(var(--primary) / 0.85);
+    border: 1px solid hsl(var(--primary-glow) / 0.6);
+    border-radius: 9999px;
   }
 }
