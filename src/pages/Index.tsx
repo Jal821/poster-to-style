@@ -92,8 +92,7 @@ const Index = () => {
           </p>
           <h1 className="text-spaced text-5xl sm:text-7xl md:text-8xl leading-[1.05] text-center px-[10px] py-[10px] border-secondary border-solid shadow opacity-100 rounded-full pl-[20px] pt-[20px] pr-[20px] pb-[20px] my-0 mx-px mr-[50px] mb-[50px] ml-[50px] mt-[50px] bg-inherit border-0 font-extrabold font-serif">
             ECCE JAZZ
-            <br />
-            BAND
+            <span className="block mt-6 md:mt-10">BAND</span>
           </h1>
           <div className="mt-10 mx-auto h-px w-24 bg-primary-glow/50" />
           <p className="mt-10 font-display italic text-xl text-muted-foreground max-w-2xl mx-auto">
