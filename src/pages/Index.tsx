@@ -12,7 +12,7 @@ const members = [
   { name: "Pavol Bodnár", role: "klavír", img: pavolBodnar, position: "20% center" },
   { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
   { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
-  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova, position: "center top" },
+  { name: "Mária Bodnárová", role: "spev", img: elenaBodnarova, position: "center top" },
   { name: "Peter Solárik", role: "bicie", img: peterSolarik },
 ];
 
