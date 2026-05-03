@@ -179,7 +179,7 @@ const Index = () => {
           <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-2 items-center">
             {members.map((m) => (
               <li key={m.name} className="text-center">
-                <div className="overflow-hidden rounded-[1.5rem] aspect-[3/5] bg-[hsl(var(--background-deep))] shadow-[var(--shadow-portrait)] mb-5 -skew-x-[8deg] transform-gpu ring-1 ring-primary-glow/40">
+                <div className="overflow-hidden rounded-[1.5rem] aspect-[3/5] bg-[hsl(var(--background-deep))] shadow-[var(--shadow-portrait)] mb-5 -skew-x-[14deg] transform-gpu ring-1 ring-primary-glow/40">
                   <img
                     src={m.img}
                     alt={`${m.name} — ${m.role}`}
@@ -187,7 +187,7 @@ const Index = () => {
                     height={768}
                     loading="lazy"
                     style={{ objectPosition: (m as any).position ?? "top" }}
-                    className="w-full h-full object-cover skew-x-[8deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
+                    className="w-full h-full object-cover skew-x-[14deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
                   />
                 </div>
                 <p className="font-display text-spaced uppercase text-sm leading-tight">
