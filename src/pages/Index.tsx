@@ -176,7 +176,7 @@ const Index = () => {
             <h2 className="font-display text-spaced text-4xl md:text-5xl">ČLENOVIA</h2>
           </div>
 
-          <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-2 items-center">
+          <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-2 items-start">
             {members.map((m) => (
               <li key={m.name} className="text-center">
                 <div className="overflow-hidden rounded-[1.5rem] aspect-[3/5] bg-[hsl(var(--background-deep))] shadow-[var(--shadow-portrait)] mb-5 -skew-x-[14deg] transform-gpu ring-1 ring-primary-glow/40">
