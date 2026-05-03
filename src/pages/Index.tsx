@@ -70,7 +70,7 @@ const Index = () => {
 
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-32 text-center">
           <p className="font-display italic text-primary-glow mb-6 tracking-widest text-sm uppercase">
-            Slovenská jazzová formácia
+            &nbsp;
           </p>
           <h1 className="font-display text-spaced text-5xl sm:text-7xl md:text-8xl font-medium leading-[1.05]">
             ECCE JAZZ
