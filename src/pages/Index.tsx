@@ -7,11 +7,11 @@ import elenaBodnarova from "@/assets/elena-bodnarova.webp";
 import peterSolarik from "@/assets/peter-solarik.webp";
 
 const members = [
-  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "30% 30%" },
-  { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch, position: "65% 40%" },
-  { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak, position: "30% 30%" },
-  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova, position: "65% 35%" },
-  { name: "Peter Solárik", role: "bicie", img: peterSolarik, position: "65% 35%" },
+  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar },
+  { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
+  { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
+  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova },
+  { name: "Peter Solárik", role: "bicie", img: peterSolarik },
 ];
 
 const albums = [
@@ -164,14 +164,13 @@ const Index = () => {
           <ul className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
             {members.map((m) => (
               <li key={m.name} className="text-center">
-                <div className="overflow-hidden rounded-[1.5rem] aspect-[3/5] pill-teal shadow-[var(--shadow-portrait)] mb-5 -skew-y-[8deg] transform-gpu">
+                <div className="overflow-hidden rounded-[1.5rem] aspect-[3/5] bg-[hsl(var(--background-deep))] shadow-[var(--shadow-portrait)] mb-5 -skew-y-[8deg] transform-gpu">
                   <img
                     src={m.img}
                     alt={`${m.name} — ${m.role}`}
                     width={512}
                     height={768}
                     loading="lazy"
-                    style={{ objectPosition: m.position }}
                     className="w-full h-full object-cover skew-y-[8deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
                   />
                 </div>
