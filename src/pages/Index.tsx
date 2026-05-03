@@ -111,8 +111,12 @@ const Index = () => {
 
       {/* O KAPELE */}
       <section id="kapela" className="relative py-28 bg-primary">
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-[auto_1fr] gap-12 items-start">
-          <MountainBadge size={120} />
+        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-[auto_1fr] gap-12 items-stretch">
+          <img
+            src={logo}
+            alt="Ecce Jazz Band logo"
+            className="shrink-0 object-contain h-full w-auto self-stretch max-h-[420px]"
+          />
           <div className="space-y-8 font-body text-lg leading-relaxed text-foreground/95">
             <p>
               Základom pre názov hudobnej skupiny je album <em className="font-display not-italic font-semibold">Ecce Jazz</em> skladateľa
