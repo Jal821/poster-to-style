@@ -94,8 +94,7 @@ const Index = () => {
             ECCE JAZZ
             <span className="block mt-6 md:mt-10">BAND</span>
           </h1>
-          <div className="mt-10 mx-auto h-px w-24 bg-primary-glow/50" />
-          <p className="mt-10 font-display italic text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-10 font-display italic text-3xl md:text-4xl text-muted-foreground max-w-3xl mx-auto text-center">
             Slovenský jazz s dušou hôr.
           </p>
 
