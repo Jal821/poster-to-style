@@ -171,7 +171,7 @@ const Index = () => {
                     width={512}
                     height={768}
                     loading="lazy"
-                    className="w-full h-full object-cover skew-y-[8deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
+                    className="w-full h-full object-cover object-top skew-y-[8deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
                   />
                 </div>
                 <p className="font-display text-spaced uppercase text-sm leading-tight">
