@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Music, ExternalLink, Disc3, Headphones } from "lucide-react";
 import logo from "@/assets/logo.webp";
 import pavolBodnar from "@/assets/pavol-bodnar.webp";
@@ -5,6 +6,7 @@ import stanislavPaluch from "@/assets/stanislav-paluch.webp";
 import jurajGriglak from "@/assets/juraj-griglak.webp";
 import elenaBodnarova from "@/assets/elena-bodnarova.webp";
 import peterSolarik from "@/assets/peter-solarik.webp";
+import { supabase } from "@/integrations/supabase/client";
 
 const members = [
   { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "20% center" },
@@ -14,12 +16,18 @@ const members = [
   { name: "Peter Solárik", role: "bicie", img: peterSolarik },
 ];
 
-const events = [
-  { date: "12. 06. 2026", city: "Bratislava", venue: "Jazz Cafe", time: "20:00" },
-  { date: "27. 06. 2026", city: "Košice", venue: "Tabačka Kulturfabrik", time: "19:30" },
-  { date: "18. 07. 2026", city: "Banská Bystrica", venue: "Múzeum SNP — nádvorie", time: "20:00" },
-  { date: "05. 09. 2026", city: "Prešov", venue: "PKO Čierny orol", time: "19:00" },
-];
+type EventRow = {
+  id: string;
+  event_date: string;
+  event_time: string;
+  city: string;
+  venue: string;
+};
+
+const formatDate = (iso: string) => {
+  const [y, m, d] = iso.split("-");
+  return `${d}. ${m}. ${y}`;
+};
 
 const MountainBadge = ({ size = 80 }: { size?: number }) => (
   <img
@@ -33,6 +41,16 @@ const MountainBadge = ({ size = 80 }: { size?: number }) => (
 );
 
 const Index = () => {
+  const [events, setEvents] = useState<EventRow[]>([]);
+
+  useEffect(() => {
+    supabase
+      .from("events")
+      .select("*")
+      .order("event_date", { ascending: true })
+      .then(({ data }) => setEvents(data ?? []));
+  }, []);
+
   return (
     <div id="top" className="min-h-screen poster-bg text-foreground overflow-x-hidden">
       {/* HERO */}
