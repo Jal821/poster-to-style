@@ -13,7 +13,7 @@ const members = [
   { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch, position: "center center", zoom: 1.5 },
   { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
   { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova, position: "center 35%", zoom: 1.5 },
-  { name: "Peter Solárik", role: "bicie", img: peterSolarik },
+  { name: "Peter Solárik", role: "bicie", img: peterSolarik, position: "35% top" },
 ];
 
 type EventRow = {
