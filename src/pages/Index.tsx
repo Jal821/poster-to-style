@@ -33,7 +33,7 @@ const MountainBadge = ({ size = 80 }: { size?: number }) => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen poster-bg text-foreground overflow-x-hidden">
+    <div id="top" className="min-h-screen poster-bg text-foreground overflow-x-hidden">
       {/* HERO */}
       <header className="relative">
         <div className="absolute inset-0 pointer-events-none opacity-60">
