@@ -154,7 +154,7 @@ const Index = () => {
       </section>
 
       {/* ČLENOVIA */}
-      <section id="clenovia" className="relative diagonal-panel py-28">
+      <section id="clenovia" className="relative diagonal-panel py-28 bg-accent">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">Zostava</p>
