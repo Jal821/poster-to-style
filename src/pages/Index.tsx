@@ -9,11 +9,11 @@ import peterSolarik from "@/assets/peter-solarik.webp";
 import { supabase } from "@/integrations/supabase/client";
 
 const members = [
-  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "center center", zoom: 1.5 },
-  { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch, position: "center center", zoom: 1.5 },
+  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "20% center" },
+  { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
   { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
-  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova, position: "center 35%", zoom: 1.5 },
-  { name: "Peter Solárik", role: "bicie", img: peterSolarik, position: "35% top" },
+  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova },
+  { name: "Peter Solárik", role: "bicie", img: peterSolarik },
 ];
 
 type EventRow = {
@@ -176,7 +176,7 @@ const Index = () => {
             <h2 className="font-display text-spaced text-4xl md:text-5xl">ČLENOVIA</h2>
           </div>
 
-          <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-2 items-start">
+          <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-2 items-center">
             {members.map((m) => (
               <li key={m.name} className="text-center">
                 <div className="overflow-hidden rounded-[1.5rem] aspect-[3/5] bg-[hsl(var(--background-deep))] shadow-[var(--shadow-portrait)] mb-5 -skew-x-[14deg] transform-gpu ring-1 ring-primary-glow/40">
@@ -186,8 +186,8 @@ const Index = () => {
                     width={512}
                     height={768}
                     loading="lazy"
-                    style={{ objectPosition: (m as any).position ?? "top", transform: `skewX(14deg) scale(${((m as any).zoom ?? 1) * 1.1})` }}
-                    className="w-full h-full object-cover hover:scale-[1.18] transition-transform duration-700 mx-0 text-right ml-0"
+                    style={{ objectPosition: (m as any).position ?? "top" }}
+                    className="w-full h-full object-cover skew-x-[14deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
                   />
                 </div>
                 <p className="font-display text-spaced uppercase text-sm leading-tight">
