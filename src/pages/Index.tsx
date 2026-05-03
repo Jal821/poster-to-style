@@ -138,11 +138,11 @@ const Index = () => {
                 <Music size={14} /> Spotify
               </a>
               <a className="px-6 py-2.5 rounded-full bg-background/30 hover:bg-background/50 transition font-display text-spaced uppercase text-xs flex items-center gap-2"
-                href="#" target="_blank" rel="noreferrer">
+                href="https://music.apple.com/us/album/zahorami-single/1894092068" target="_blank" rel="noreferrer">
                 <Disc3 size={14} /> Apple Music
               </a>
               <a className="px-6 py-2.5 rounded-full bg-background/30 hover:bg-background/50 transition font-display text-spaced uppercase text-xs flex items-center gap-2"
-                href="#" target="_blank" rel="noreferrer">
+                href="https://youtube.com/playlist?list=OLAK5uy_neKiYoyxBmsv8KGczUV3EiOwu-mChyY2U&si=_SMtddh7aaq_yWVq" target="_blank" rel="noreferrer">
                 <ExternalLink size={14} /> YouTube
               </a>
             </div>
