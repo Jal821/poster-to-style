@@ -172,7 +172,7 @@ const Index = () => {
       <section id="clenovia" className="relative py-28 bg-primary">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">​</p>
+            
             <h2 className="font-display text-spaced text-4xl md:text-5xl mt-0 text-center">ČLENOVIA</h2>
           </div>
 
