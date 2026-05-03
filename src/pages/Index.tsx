@@ -71,7 +71,7 @@ const Index = () => {
               { href: "#top", label: "Domov" },
               { href: "#kapela", label: "O nás" },
               { href: "#clenovia", label: "Členovia" },
-              { href: "#podujatia", label: "Podujatia" },
+              { href: "#podujatia", label: "Kalendár" },
               { href: "#kontakt", label: "Kontakt" },
             ].map((item) => (
               <li key={item.href}>
