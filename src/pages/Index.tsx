@@ -14,10 +14,11 @@ const members = [
   { name: "Peter Solárik", role: "bicie", img: peterSolarik },
 ];
 
-const albums = [
-  { title: "ECCE JAZZ", year: "2006", label: "Hevhetia", note: "Cena Aurel — najlepší jazzový album roka" },
-  { title: "Džez a hory", year: "2020", label: "Hudobný fond", note: "Slovenská melodika v jazzovom prevedení" },
-  { title: "ZAHORAMI", year: "2026", label: "Singel", note: "Aktuálny singel — dostupný na streamovacích platformách" },
+const events = [
+  { date: "12. 06. 2026", city: "Bratislava", venue: "Jazz Cafe", time: "20:00" },
+  { date: "27. 06. 2026", city: "Košice", venue: "Tabačka Kulturfabrik", time: "19:30" },
+  { date: "18. 07. 2026", city: "Banská Bystrica", venue: "Múzeum SNP — nádvorie", time: "20:00" },
+  { date: "05. 09. 2026", city: "Prešov", venue: "PKO Čierny orol", time: "19:00" },
 ];
 
 const MountainBadge = ({ size = 80 }: { size?: number }) => (
@@ -52,7 +53,7 @@ const Index = () => {
               { href: "#top", label: "Domov" },
               { href: "#kapela", label: "O nás" },
               { href: "#clenovia", label: "Kapela" },
-              { href: "#diskografia", label: "Nahrávky" },
+              { href: "#podujatia", label: "Podujatia" },
               { href: "#kontakt", label: "Kontakt" },
             ].map((item) => (
               <li key={item.href}>
@@ -187,30 +188,29 @@ const Index = () => {
         </div>
       </section>
 
-      {/* DISKOGRAFIA */}
-      <section id="diskografia" className="relative py-28">
-        <div className="max-w-6xl mx-auto px-6">
+      {/* KDE NÁS UVIDÍTE */}
+      <section id="podujatia" className="relative py-28">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">Hudba</p>
-            <h2 className="font-display text-spaced text-4xl md:text-5xl">DISKOGRAFIA</h2>
+            <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">Koncerty</p>
+            <h2 className="font-display text-spaced text-4xl md:text-5xl">KDE NÁS UVIDÍTE</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {albums.map((a) => (
-              <article
-                key={a.title}
-                className="relative p-8 rounded-[1.5rem] bg-card border border-border hover:border-primary-glow/60 transition-colors group"
+          <ul className="divide-y divide-border/60 border-y border-border/60">
+            {events.map((e) => (
+              <li
+                key={`${e.date}-${e.city}`}
+                className="grid grid-cols-1 md:grid-cols-[180px_1fr_auto] gap-2 md:gap-8 items-baseline py-6 px-2 hover:bg-card/40 transition-colors"
               >
-                <div className="flex items-start justify-between mb-6">
-                  <MountainBadge size={56} />
-                  <span className="font-display italic text-primary-glow">{a.year}</span>
+                <span className="font-display italic text-primary-glow text-lg">{e.date}</span>
+                <div>
+                  <p className="font-display text-spaced uppercase text-xl">{e.city}</p>
+                  <p className="font-body text-sm text-muted-foreground mt-1">{e.venue}</p>
                 </div>
-                <h3 className="font-display text-spaced text-2xl mb-2">{a.title}</h3>
-                <p className="font-display italic text-sm text-muted-foreground mb-4">{a.label}</p>
-                <p className="font-body text-sm text-foreground/85 leading-relaxed">{a.note}</p>
-              </article>
+                <span className="font-display text-spaced uppercase text-sm text-foreground/80">{e.time}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
