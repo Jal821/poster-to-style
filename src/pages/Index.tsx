@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Music, ExternalLink, Disc3, Headphones } from "lucide-react";
 import logo from "@/assets/logo.webp";
 import pavolBodnar from "@/assets/pavol-bodnar.webp";
@@ -5,6 +6,7 @@ import stanislavPaluch from "@/assets/stanislav-paluch.webp";
 import jurajGriglak from "@/assets/juraj-griglak.webp";
 import elenaBodnarova from "@/assets/elena-bodnarova.webp";
 import peterSolarik from "@/assets/peter-solarik.webp";
+import { supabase } from "@/integrations/supabase/client";
 
 const members = [
   { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "20% center" },
@@ -14,12 +16,18 @@ const members = [
   { name: "Peter Solárik", role: "bicie", img: peterSolarik },
 ];
 
-const events = [
-  { date: "12. 06. 2026", city: "Bratislava", venue: "Jazz Cafe", time: "20:00" },
-  { date: "27. 06. 2026", city: "Košice", venue: "Tabačka Kulturfabrik", time: "19:30" },
-  { date: "18. 07. 2026", city: "Banská Bystrica", venue: "Múzeum SNP — nádvorie", time: "20:00" },
-  { date: "05. 09. 2026", city: "Prešov", venue: "PKO Čierny orol", time: "19:00" },
-];
+type EventRow = {
+  id: string;
+  event_date: string;
+  event_time: string;
+  city: string;
+  venue: string;
+};
+
+const formatDate = (iso: string) => {
+  const [y, m, d] = iso.split("-");
+  return `${d}. ${m}. ${y}`;
+};
 
 const MountainBadge = ({ size = 80 }: { size?: number }) => (
   <img
@@ -33,6 +41,16 @@ const MountainBadge = ({ size = 80 }: { size?: number }) => (
 );
 
 const Index = () => {
+  const [events, setEvents] = useState<EventRow[]>([]);
+
+  useEffect(() => {
+    supabase
+      .from("events")
+      .select("*")
+      .order("event_date", { ascending: true })
+      .then(({ data }) => setEvents(data ?? []));
+  }, []);
+
   return (
     <div id="top" className="min-h-screen poster-bg text-foreground overflow-x-hidden">
       {/* HERO */}
@@ -196,21 +214,27 @@ const Index = () => {
             <h2 className="font-display text-spaced text-4xl md:text-5xl">KDE NÁS UVIDÍTE</h2>
           </div>
 
-          <ul className="divide-y divide-border/60 border-y border-border/60">
-            {events.map((e) => (
-              <li
-                key={`${e.date}-${e.city}`}
-                className="grid grid-cols-1 md:grid-cols-[180px_1fr_auto] gap-2 md:gap-8 items-baseline py-6 px-2 hover:bg-card/40 transition-colors"
-              >
-                <span className="font-display italic text-primary-glow text-lg">{e.date}</span>
-                <div>
-                  <p className="font-display text-spaced uppercase text-xl">{e.city}</p>
-                  <p className="font-body text-sm text-muted-foreground mt-1">{e.venue}</p>
-                </div>
-                <span className="font-display text-spaced uppercase text-sm text-foreground/80">{e.time}</span>
-              </li>
-            ))}
-          </ul>
+          {events.length === 0 ? (
+            <p className="text-center font-display italic text-muted-foreground">
+              Termíny budú zverejnené čoskoro.
+            </p>
+          ) : (
+            <ul className="divide-y divide-border/60 border-y border-border/60">
+              {events.map((e) => (
+                <li
+                  key={e.id}
+                  className="grid grid-cols-1 md:grid-cols-[180px_1fr_auto] gap-2 md:gap-8 items-baseline py-6 px-2 hover:bg-card/40 transition-colors"
+                >
+                  <span className="font-display italic text-primary-glow text-lg">{formatDate(e.event_date)}</span>
+                  <div>
+                    <p className="font-display text-spaced uppercase text-xl">{e.city}</p>
+                    <p className="font-body text-sm text-muted-foreground mt-1">{e.venue}</p>
+                  </div>
+                  <span className="font-display text-spaced uppercase text-sm text-foreground/80">{e.event_time}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </section>
 
