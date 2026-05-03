@@ -148,7 +148,7 @@ const Index = () => {
           <ul className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-5">
             {members.map((m) => (
               <li key={m.name} className="text-center">
-                <div className="overflow-hidden rounded-[2rem] aspect-[3/5] bg-background-deep shadow-[var(--shadow-portrait)] mb-4">
+                <div className="overflow-hidden rounded-[2rem] aspect-[3/5] bg-[hsl(var(--background-deep))] shadow-[var(--shadow-portrait)] mb-4">
                   <img
                     src={m.img}
                     alt={`${m.name} — ${m.role}`}
