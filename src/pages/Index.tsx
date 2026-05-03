@@ -179,7 +179,7 @@ const Index = () => {
           <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-2 items-start">
             {members.map((m) => (
               <li key={m.name} className="text-center">
-                <div className="overflow-hidden rounded-[1.5rem] aspect-[3/5] bg-[hsl(var(--background-deep))] shadow-[var(--shadow-portrait)] mb-5 -skew-x-[14deg] transform-gpu ring-1 ring-primary-glow/40">
+                <div className="overflow-hidden rounded-[1.5rem] aspect-[3/5] bg-[hsl(var(--background-deep))] shadow-[var(--shadow-portrait)] mb-3 -skew-x-[14deg] transform-gpu ring-1 ring-primary-glow/40 mx-auto w-full">
                   <img
                     src={m.img}
                     alt={`${m.name} — ${m.role}`}
