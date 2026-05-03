@@ -99,7 +99,7 @@ const Index = () => {
       </header>
 
       {/* O KAPELE */}
-      <section id="kapela" className="relative diagonal-panel py-28">
+      <section id="kapela" className="relative diagonal-panel py-28 bg-accent">
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-[auto_1fr] gap-12 items-start">
           <MountainBadge size={120} />
           <div className="space-y-8 font-body text-lg leading-relaxed text-foreground/95">
