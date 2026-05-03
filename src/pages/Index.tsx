@@ -96,7 +96,7 @@ const Index = () => {
           </h1>
           <div className="mt-10 mx-auto h-px w-24 bg-primary-glow/50" />
           <p className="mt-10 font-display italic text-xl text-muted-foreground max-w-2xl mx-auto">
-            „Slovenský jazz s dušou hôr."
+            Slovenský jazz s dušou hôr.
           </p>
 
           <div className="mt-12 flex flex-wrap gap-4 justify-center">
