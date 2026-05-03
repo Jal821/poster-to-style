@@ -110,14 +110,14 @@ const Index = () => {
       </header>
 
       {/* O KAPELE */}
-      <section id="kapela" className="relative py-28 bg-primary mt-0 pt-[60px]">
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-[auto_1fr] gap-12 items-stretch">
+      <section id="kapela" className="relative bg-primary mt-0 pt-[60px] py-[6px] pb-[82px] text-justify">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[auto_1fr] gap-12 items-stretch text-center px-0">
           <img
             src={logo}
             alt="Ecce Jazz Band logo"
-            className="shrink-0 object-contain h-full w-auto self-stretch max-h-[420px] mb-0 pb-0 pt-0 mt-[50px]"
+            className="shrink-0 object-contain h-full w-auto self-stretch max-h-[420px] mb-0 pb-0 pt-0 mt-0 text-justify"
           />
-          <div className="space-y-8 font-body text-lg leading-relaxed text-foreground/95 my-[50px] mb-0 mt-[80px]">
+          <div className="space-y-8 font-body text-lg leading-relaxed text-foreground/95 mb-0 my-0 mt-0">
             <p>
               Základom pre názov hudobnej skupiny je album <em className="font-display not-italic font-semibold">Ecce Jazz</em> skladateľa
               a klaviristu <strong className="font-semibold">Pavla Bodnára</strong>, ktorý v roku 2006 získal cenu <em className="text-primary-glow not-italic">Aurel</em> ako
