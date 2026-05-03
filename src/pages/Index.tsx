@@ -47,12 +47,23 @@ const Index = () => {
             <MountainBadge size={44} />
             <span className="font-display text-spaced text-sm uppercase">Ecce Jazz</span>
           </div>
-          <ul className="flex items-center gap-5 md:gap-8 font-display text-spaced uppercase text-xs md:text-sm">
-            <li><a href="#top" className="hover:text-primary-glow transition-colors">Domov</a></li>
-            <li><a href="#kapela" className="hover:text-primary-glow transition-colors">O nás</a></li>
-            <li><a href="#clenovia" className="hover:text-primary-glow transition-colors">Kapela</a></li>
-            <li><a href="#diskografia" className="hover:text-primary-glow transition-colors">Nahrávky</a></li>
-            <li><a href="#kontakt" className="hover:text-primary-glow transition-colors">Kontakt</a></li>
+          <ul className="flex items-center gap-1 md:gap-2 font-display text-spaced uppercase text-sm md:text-base font-semibold rounded-full border border-primary-glow/30 bg-background-deep/60 backdrop-blur-md px-2 py-1.5 shadow-[var(--shadow-soft)]">
+            {[
+              { href: "#top", label: "Domov" },
+              { href: "#kapela", label: "O nás" },
+              { href: "#clenovia", label: "Kapela" },
+              { href: "#diskografia", label: "Nahrávky" },
+              { href: "#kontakt", label: "Kontakt" },
+            ].map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className="block px-3 md:px-4 py-2 rounded-full text-foreground hover:bg-primary/30 hover:text-primary-glow transition-colors"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
 
