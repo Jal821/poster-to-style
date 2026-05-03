@@ -1,17 +1,17 @@
 import { Music, ExternalLink, Disc3 } from "lucide-react";
 import logo from "@/assets/logo.webp";
-import member1 from "@/assets/member-1.jpg";
-import member2 from "@/assets/member-2.jpg";
-import member3 from "@/assets/member-3.jpg";
-import member4 from "@/assets/member-4.jpg";
-import member5 from "@/assets/member-5.jpg";
+import pavolBodnar from "@/assets/pavol-bodnar.webp";
+import stanislavPaluch from "@/assets/stanislav-paluch.webp";
+import jurajGriglak from "@/assets/juraj-griglak.webp";
+import elenaBodnarova from "@/assets/elena-bodnarova.webp";
+import peterSolarik from "@/assets/peter-solarik.webp";
 
 const members = [
-  { name: "Pavol Bodnár", role: "klavír / kompozície", img: member1 },
-  { name: "Stanislav Palúch", role: "husle", img: member2 },
-  { name: "Juraj Griglák", role: "kontrabas", img: member3 },
-  { name: "Mária Elena Bodnárová", role: "spev", img: member4 },
-  { name: "Peter Solárik", role: "bicie", img: member5 },
+  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar },
+  { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
+  { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
+  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova },
+  { name: "Peter Solárik", role: "bicie", img: peterSolarik },
 ];
 
 const albums = [
