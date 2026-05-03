@@ -9,10 +9,10 @@ import peterSolarik from "@/assets/peter-solarik.webp";
 import { supabase } from "@/integrations/supabase/client";
 
 const members = [
-  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "20% center" },
-  { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
+  { name: "Pavol Bodnár", role: "klavír / kompozície", img: pavolBodnar, position: "20% center", zoom: 1.5 },
+  { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch, zoom: 1.5 },
   { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
-  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova },
+  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova, zoom: 1.5 },
   { name: "Peter Solárik", role: "bicie", img: peterSolarik },
 ];
 
