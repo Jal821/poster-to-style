@@ -186,8 +186,8 @@ const Index = () => {
                     width={512}
                     height={768}
                     loading="lazy"
-                    style={{ objectPosition: (m as any).position ?? "top" }}
-                    className="w-full h-full object-cover skew-x-[14deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
+                    style={{ objectPosition: (m as any).position ?? "top", transform: `skewX(14deg) scale(${((m as any).zoom ?? 1) * 1.1})` }}
+                    className="w-full h-full object-cover hover:scale-[1.18] transition-transform duration-700"
                   />
                 </div>
                 <p className="font-display text-spaced uppercase text-sm leading-tight">
