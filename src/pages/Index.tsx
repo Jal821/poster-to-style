@@ -192,7 +192,7 @@ const Index = () => {
                 </div>
                 <p className="font-display text-spaced uppercase text-sm leading-tight -translate-x-3">
                   {((m as any).nameParts ?? m.name.split(" ")).map((part: string, i: number) => (
-                    <span key={i} className="block text-center mr-[50px] mt-[20px]">{part}</span>
+                    <span key={i} className="block text-center mr-[50px] my-0 mt-0">{part}</span>
                   ))}
                 </p>
                 <p className="font-display italic text-sm md:text-base text-muted-foreground mt-2 -translate-x-3 mx-[50px] ml-0">{m.role}</p>
