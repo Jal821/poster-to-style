@@ -1,4 +1,4 @@
-import { Music, ExternalLink, Disc3 } from "lucide-react";
+import { Music, ExternalLink, Disc3, Headphones } from "lucide-react";
 import logo from "@/assets/logo.webp";
 import pavolBodnar from "@/assets/pavol-bodnar.webp";
 import stanislavPaluch from "@/assets/stanislav-paluch.webp";
@@ -144,6 +144,10 @@ const Index = () => {
               <a className="px-6 py-2.5 rounded-full bg-background/30 hover:bg-background/50 transition font-display text-spaced uppercase text-xs flex items-center gap-2"
                 href="https://youtube.com/playlist?list=OLAK5uy_neKiYoyxBmsv8KGczUV3EiOwu-mChyY2U&si=_SMtddh7aaq_yWVq" target="_blank" rel="noreferrer">
                 <ExternalLink size={14} /> YouTube
+              </a>
+              <a className="px-6 py-2.5 rounded-full bg-background/30 hover:bg-background/50 transition font-display text-spaced uppercase text-xs flex items-center gap-2"
+                href="https://link.deezer.com/s/33ahcHZ6E8c3KX1zBkzMm" target="_blank" rel="noreferrer">
+                <Headphones size={14} /> Deezer
               </a>
             </div>
           </div>
