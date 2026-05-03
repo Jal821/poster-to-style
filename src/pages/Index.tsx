@@ -115,7 +115,7 @@ const Index = () => {
           <img
             src={logo}
             alt="Ecce Jazz Band logo"
-            className="shrink-0 object-contain h-full w-auto self-stretch max-h-[420px]"
+            className="shrink-0 object-contain h-full w-auto self-stretch max-h-[420px] mb-0 pb-0 pt-0 mt-[50px]"
           />
           <div className="space-y-8 font-body text-lg leading-relaxed text-foreground/95">
             <p>
