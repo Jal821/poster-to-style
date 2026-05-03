@@ -33,7 +33,7 @@ const MountainBadge = ({ size = 80 }: { size?: number }) => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen poster-bg text-foreground overflow-x-hidden">
+    <div id="top" className="min-h-screen poster-bg text-foreground overflow-x-hidden">
       {/* HERO */}
       <header className="relative">
         <div className="absolute inset-0 pointer-events-none opacity-60">
@@ -47,14 +47,12 @@ const Index = () => {
             <MountainBadge size={44} />
             <span className="font-display text-spaced text-sm uppercase">Ecce Jazz</span>
           </div>
-          <a
-            href="https://www.eccejazzband.sk"
-            target="_blank"
-            rel="noreferrer"
-            className="font-display italic text-sm hover:text-primary-glow transition-colors"
-          >
-            www.eccejazzband.sk
-          </a>
+          <ul className="flex items-center gap-5 md:gap-8 font-display text-spaced uppercase text-xs md:text-sm">
+            <li><a href="#top" className="hover:text-primary-glow transition-colors">Domov</a></li>
+            <li><a href="#kapela" className="hover:text-primary-glow transition-colors">Kapela</a></li>
+            <li><a href="#diskografia" className="hover:text-primary-glow transition-colors">Nahrávky</a></li>
+            <li><a href="#kontakt" className="hover:text-primary-glow transition-colors">Kontakt</a></li>
+          </ul>
         </nav>
 
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-32 text-center">
