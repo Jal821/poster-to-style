@@ -104,7 +104,7 @@ const Index = () => {
               href="#singel"
               className="pill-teal px-7 py-3 font-display text-spaced uppercase text-sm hover:opacity-90 transition"
             >
-              Vypočuť ZAHORAMI
+              Vypočuť Nahrávky
             </a>
           </div>
         </div>
