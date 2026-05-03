@@ -79,10 +79,10 @@
 
   .diagonal-panel {
     background: linear-gradient(115deg,
-      hsl(217 42% 14%) 0%,
-      hsl(217 38% 18%) 35%,
-      hsl(217 45% 12%) 70%,
-      hsl(217 40% 16%) 100%);
+      hsl(174 60% 28%) 0%,
+      hsl(174 55% 36%) 35%,
+      hsl(174 65% 24%) 70%,
+      hsl(174 58% 32%) 100%);
   }
 
   .text-spaced {
