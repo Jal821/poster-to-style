@@ -214,21 +214,27 @@ const Index = () => {
             <h2 className="font-display text-spaced text-4xl md:text-5xl">KDE NÁS UVIDÍTE</h2>
           </div>
 
-          <ul className="divide-y divide-border/60 border-y border-border/60">
-            {events.map((e) => (
-              <li
-                key={`${e.date}-${e.city}`}
-                className="grid grid-cols-1 md:grid-cols-[180px_1fr_auto] gap-2 md:gap-8 items-baseline py-6 px-2 hover:bg-card/40 transition-colors"
-              >
-                <span className="font-display italic text-primary-glow text-lg">{e.date}</span>
-                <div>
-                  <p className="font-display text-spaced uppercase text-xl">{e.city}</p>
-                  <p className="font-body text-sm text-muted-foreground mt-1">{e.venue}</p>
-                </div>
-                <span className="font-display text-spaced uppercase text-sm text-foreground/80">{e.time}</span>
-              </li>
-            ))}
-          </ul>
+          {events.length === 0 ? (
+            <p className="text-center font-display italic text-muted-foreground">
+              Termíny budú zverejnené čoskoro.
+            </p>
+          ) : (
+            <ul className="divide-y divide-border/60 border-y border-border/60">
+              {events.map((e) => (
+                <li
+                  key={e.id}
+                  className="grid grid-cols-1 md:grid-cols-[180px_1fr_auto] gap-2 md:gap-8 items-baseline py-6 px-2 hover:bg-card/40 transition-colors"
+                >
+                  <span className="font-display italic text-primary-glow text-lg">{formatDate(e.event_date)}</span>
+                  <div>
+                    <p className="font-display text-spaced uppercase text-xl">{e.city}</p>
+                    <p className="font-body text-sm text-muted-foreground mt-1">{e.venue}</p>
+                  </div>
+                  <span className="font-display text-spaced uppercase text-sm text-foreground/80">{e.event_time}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </section>
 
