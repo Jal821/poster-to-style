@@ -12,7 +12,7 @@ const members = [
   { name: "Pavol Bodnár", role: "klavír", img: pavolBodnar, position: "20% center" },
   { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
   { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
-  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova, position: "center top" },
+  { name: "Mária Elena Bodnárová", role: "spev", img: elenaBodnarova, position: "center top", nameParts: ["Mária Elena", "Bodnárová"] },
   { name: "Peter Solárik", role: "bicie", img: peterSolarik },
 ];
 
@@ -191,7 +191,7 @@ const Index = () => {
                   />
                 </div>
                 <p className="font-display text-spaced uppercase text-sm leading-tight -translate-x-3">
-                  {m.name.split(" ").map((part, i) => (
+                  {((m as any).nameParts ?? m.name.split(" ")).map((part: string, i: number) => (
                     <span key={i} className="block text-center mr-[50px]">{part}</span>
                   ))}
                 </p>
