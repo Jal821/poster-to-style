@@ -72,7 +72,7 @@ const Index = () => {
           <p className="font-display italic text-primary-glow mb-6 tracking-widest text-sm uppercase">
             &nbsp;
           </p>
-          <h1 className="font-display text-spaced text-5xl sm:text-7xl md:text-8xl font-medium leading-[1.05]">
+          <h1 className="font-display text-spaced text-5xl sm:text-7xl md:text-8xl leading-[1.05] font-bold">
             ECCE JAZZ
             <br />
             BAND
