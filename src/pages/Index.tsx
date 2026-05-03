@@ -173,7 +173,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">​</p>
-            <h2 className="font-display text-spaced text-4xl md:text-5xl">ČLENOVIA</h2>
+            <h2 className="font-display text-spaced text-4xl md:text-5xl mt-0">ČLENOVIA</h2>
           </div>
 
           <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-2 items-start">
@@ -192,7 +192,7 @@ const Index = () => {
                 </div>
                 <p className="font-display text-spaced uppercase text-sm leading-tight -translate-x-3">
                   {((m as any).nameParts ?? m.name.split(" ")).map((part: string, i: number) => (
-                    <span key={i} className="block text-center mr-[50px]">{part}</span>
+                    <span key={i} className="block text-center mr-[50px] mt-[20px]">{part}</span>
                   ))}
                 </p>
                 <p className="font-display italic text-sm md:text-base text-muted-foreground mt-2 -translate-x-3 mx-[50px] ml-0">{m.role}</p>
