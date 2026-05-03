@@ -110,7 +110,7 @@ const Index = () => {
       </header>
 
       {/* O KAPELE */}
-      <section id="kapela" className="relative py-28 bg-primary">
+      <section id="kapela" className="relative py-28 bg-primary mt-0 pt-[60px]">
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-[auto_1fr] gap-12 items-stretch">
           <img
             src={logo}
@@ -192,7 +192,7 @@ const Index = () => {
                 </div>
                 <p className="font-display text-spaced uppercase text-sm leading-tight -translate-x-3">
                   {m.name.split(" ").map((part, i) => (
-                    <span key={i} className="block">{part}</span>
+                    <span key={i} className="block text-center">{part}</span>
                   ))}
                 </p>
                 <p className="font-display italic text-sm md:text-base text-muted-foreground mt-2 -translate-x-3">{m.role}</p>
