@@ -194,7 +194,7 @@ const Index = () => {
                     <span key={i} className="block text-center mr-[50px] mt-0">{part}</span>
                   ))}
                 </p>
-                <p className="font-display italic text-sm md:text-base text-muted-foreground mt-2 -translate-x-3 mx-[50px] ml-0">{m.role}</p>
+                <p className="font-display italic text-sm md:text-base text-muted-foreground mt-2 -translate-x-3 mx-[50px] ml-0">{t.members.roles[m.role]}</p>
               </li>
             ))}
           </ul>
