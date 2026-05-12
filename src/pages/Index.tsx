@@ -124,16 +124,10 @@ const Index = () => {
           />
           <div className="space-y-8 font-body text-lg leading-relaxed text-foreground/95 mb-0 my-0 mt-0">
             <p>
-              Základom pre názov hudobnej skupiny je album <em className="font-display not-italic font-semibold">Ecce Jazz</em> skladateľa
-              a klaviristu <strong className="font-semibold">Pavla Bodnára</strong>, ktorý v roku 2006 získal cenu <em className="text-primary-glow not-italic">Aurel</em> ako
-              najlepší jazzový album roka. Skupinu tvoria renomovaní hudobníci slovenskej jazzovej scény, ako aj
-              charizmatická speváčka s osobitým citlivým prejavom.
+              {t.about.p1a}<em className="font-display not-italic font-semibold">{t.about.eccejazz}</em>{t.about.p1b}<strong className="font-semibold">{t.about.pavol}</strong>{t.about.p1c}<em className="text-primary-glow not-italic">{t.about.aurel}</em>{t.about.p1d}
             </p>
             <p>
-              <strong className="font-semibold">Ecce Jazz Band</strong> má v programe autorské kompozície z dielne Pavla Bodnára,
-              ktoré organickým spôsobom prepájajú severoamerický a juhoamerický jazz so slovenskou melodikou. Program
-              skupiny zahŕňa skladby z albumov <em className="font-display not-italic">ECCE JAZZ</em> (Hevhetia 2006),
-              <em className="font-display not-italic"> Džez a hory</em> (Hudobný fond 2020) a obsahuje aj novú aktuálnu tvorbu.
+              <strong className="font-semibold">{t.about.p2a}</strong>{t.about.p2b}<em className="font-display not-italic">{t.about.album1}</em>{t.about.p2c}<em className="font-display not-italic">{t.about.album2}</em>{t.about.p2d}
             </p>
           </div>
         </div>
