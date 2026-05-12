@@ -44,6 +44,7 @@ const MountainBadge = ({ size = 80 }: { size?: number }) => (
 );
 
 const Index = () => {
+  const t = useT();
   const [events, setEvents] = useState<EventRow[]>([]);
 
   useEffect(() => {
