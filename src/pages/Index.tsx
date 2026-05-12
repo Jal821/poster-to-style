@@ -100,7 +100,7 @@ const Index = () => {
             <span className="block mt-6 md:mt-10">BAND</span>
           </h1>
           <p className="mt-10 font-display italic text-3xl md:text-4xl text-muted-foreground max-w-3xl mx-auto text-center">
-            Slovenský jazz s dušou hôr.
+            {t.hero.tagline}
           </p>
 
           <div className="mt-12 flex flex-wrap gap-4 justify-center">
@@ -108,7 +108,7 @@ const Index = () => {
               href="#singel"
               className="pill-teal px-7 py-3 font-display text-spaced uppercase text-sm hover:opacity-90 transition"
             >
-              Vypočuť Nahrávky
+              {t.hero.cta}
             </a>
           </div>
         </div>
