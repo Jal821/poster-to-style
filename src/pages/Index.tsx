@@ -138,12 +138,12 @@ const Index = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="pill-teal px-10 py-12 md:px-16 md:py-14 text-center shadow-[var(--shadow-soft)]">
             <p className="font-display italic uppercase text-spaced text-xs mb-3 text-foreground/80">
-              Aktuálny singel
+              {t.single.eyebrow}
             </p>
             <h2 className="font-display text-5xl md:text-7xl text-spaced">ZAHORAMI</h2>
-            <p className="font-display italic text-xl mt-3 text-foreground/85">2026</p>
+            <p className="font-display italic text-xl mt-3 text-foreground/85">{t.single.year}</p>
             <p className="mt-6 font-body text-foreground/90 max-w-xl mx-auto">
-              Dostupný na všetkých streamovacích platformách.
+              {t.single.desc}
             </p>
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <a className="px-6 py-2.5 rounded-full bg-background/30 hover:bg-background/50 transition font-display text-spaced uppercase text-xs flex items-center gap-2"
