@@ -257,7 +257,7 @@ const Index = () => {
             <MountainBadge size={48} />
             <div>
               <p className="font-display text-spaced uppercase text-sm">Ecce Jazz Band</p>
-              <p className="font-display italic text-xs text-muted-foreground">Slovenský jazz · od 2006</p>
+              <p className="font-display italic text-xs text-muted-foreground">{t.footer.tagline}</p>
             </div>
           </div>
           <a
