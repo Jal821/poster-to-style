@@ -236,8 +236,8 @@ const Index = () => {
       {/* KONTAKT */}
       <section id="kontakt" className="relative py-24 bg-primary">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">Spojte sa s nami</p>
-          <h2 className="font-display text-spaced text-4xl md:text-5xl mb-10">KONTAKT</h2>
+          <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">{t.contact.eyebrow}</p>
+          <h2 className="font-display text-spaced text-4xl md:text-5xl mb-10">{t.contact.title}</h2>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center font-display text-lg">
             <a href="mailto:info@eccejazz.sk" className="hover:text-primary-glow transition-colors">
               info@eccejazz.sk
