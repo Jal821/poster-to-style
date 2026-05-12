@@ -7,8 +7,11 @@ import jurajGriglak from "@/assets/juraj-griglak.webp";
 import elenaBodnarova from "@/assets/elena-bodnarova.webp";
 import peterSolarik from "@/assets/peter-solarik.webp";
 import { supabase } from "@/integrations/supabase/client";
+import { useT, LanguageSwitcher } from "@/lib/i18n";
 
-const members = [
+type RoleKey = "klavír" | "husle" | "kontrabas" | "spev" | "bicie";
+
+const members: Array<{ name: string; role: RoleKey; img: string; position?: string; nameParts?: string[] }> = [
   { name: "Pavol Bodnár", role: "klavír", img: pavolBodnar, position: "20% center" },
   { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
   { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
@@ -41,6 +44,7 @@ const MountainBadge = ({ size = 80 }: { size?: number }) => (
 );
 
 const Index = () => {
+  const t = useT();
   const [events, setEvents] = useState<EventRow[]>([]);
 
   useEffect(() => {
@@ -61,18 +65,18 @@ const Index = () => {
                style={{ background: "linear-gradient(225deg, hsl(217 50% 10% / 0.6), transparent)" }} />
         </div>
 
-        <nav className="relative max-w-6xl mx-auto px-6 pt-8 flex items-center justify-between">
+        <nav className="relative max-w-6xl mx-auto px-6 pt-8 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-3">
             <MountainBadge size={96} />
             <span className="font-display text-spaced text-sm uppercase">​</span>
           </div>
           <ul className="flex items-center gap-1 md:gap-2 font-display text-spaced uppercase text-sm md:text-base font-semibold rounded-full border border-primary-glow/30 bg-background-deep/60 backdrop-blur-md px-2 py-1.5 shadow-[var(--shadow-soft)]">
             {[
-              { href: "#top", label: "Domov" },
-              { href: "#kapela", label: "O nás" },
-              { href: "#clenovia", label: "Členovia" },
-              { href: "#podujatia", label: "Kalendár" },
-              { href: "#kontakt", label: "Kontakt" },
+              { href: "#top", label: t.nav.home },
+              { href: "#kapela", label: t.nav.about },
+              { href: "#clenovia", label: t.nav.members },
+              { href: "#podujatia", label: t.nav.events },
+              { href: "#kontakt", label: t.nav.contact },
             ].map((item) => (
               <li key={item.href}>
                 <a
@@ -84,6 +88,7 @@ const Index = () => {
               </li>
             ))}
           </ul>
+          <LanguageSwitcher />
         </nav>
 
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-32 text-center bg-inherit">
@@ -95,7 +100,7 @@ const Index = () => {
             <span className="block mt-6 md:mt-10">BAND</span>
           </h1>
           <p className="mt-10 font-display italic text-3xl md:text-4xl text-muted-foreground max-w-3xl mx-auto text-center">
-            Slovenský jazz s dušou hôr.
+            {t.hero.tagline}
           </p>
 
           <div className="mt-12 flex flex-wrap gap-4 justify-center">
@@ -103,7 +108,7 @@ const Index = () => {
               href="#singel"
               className="pill-teal px-7 py-3 font-display text-spaced uppercase text-sm hover:opacity-90 transition"
             >
-              Vypočuť Nahrávky
+              {t.hero.cta}
             </a>
           </div>
         </div>
@@ -119,16 +124,10 @@ const Index = () => {
           />
           <div className="space-y-8 font-body text-lg leading-relaxed text-foreground/95 mb-0 my-0 mt-0">
             <p>
-              Základom pre názov hudobnej skupiny je album <em className="font-display not-italic font-semibold">Ecce Jazz</em> skladateľa
-              a klaviristu <strong className="font-semibold">Pavla Bodnára</strong>, ktorý v roku 2006 získal cenu <em className="text-primary-glow not-italic">Aurel</em> ako
-              najlepší jazzový album roka. Skupinu tvoria renomovaní hudobníci slovenskej jazzovej scény, ako aj
-              charizmatická speváčka s osobitým citlivým prejavom.
+              {t.about.p1a}<em className="font-display not-italic font-semibold">{t.about.eccejazz}</em>{t.about.p1b}<strong className="font-semibold">{t.about.pavol}</strong>{t.about.p1c}<em className="text-primary-glow not-italic">{t.about.aurel}</em>{t.about.p1d}
             </p>
             <p>
-              <strong className="font-semibold">Ecce Jazz Band</strong> má v programe autorské kompozície z dielne Pavla Bodnára,
-              ktoré organickým spôsobom prepájajú severoamerický a juhoamerický jazz so slovenskou melodikou. Program
-              skupiny zahŕňa skladby z albumov <em className="font-display not-italic">ECCE JAZZ</em> (Hevhetia 2006),
-              <em className="font-display not-italic"> Džez a hory</em> (Hudobný fond 2020) a obsahuje aj novú aktuálnu tvorbu.
+              <strong className="font-semibold">{t.about.p2a}</strong>{t.about.p2b}<em className="font-display not-italic">{t.about.album1}</em>{t.about.p2c}<em className="font-display not-italic">{t.about.album2}</em>{t.about.p2d}
             </p>
           </div>
         </div>
@@ -139,12 +138,12 @@ const Index = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="pill-teal px-10 py-12 md:px-16 md:py-14 text-center shadow-[var(--shadow-soft)]">
             <p className="font-display italic uppercase text-spaced text-xs mb-3 text-foreground/80">
-              Aktuálny singel
+              {t.single.eyebrow}
             </p>
             <h2 className="font-display text-5xl md:text-7xl text-spaced">ZAHORAMI</h2>
-            <p className="font-display italic text-xl mt-3 text-foreground/85">2026</p>
+            <p className="font-display italic text-xl mt-3 text-foreground/85">{t.single.year}</p>
             <p className="mt-6 font-body text-foreground/90 max-w-xl mx-auto">
-              Dostupný na všetkých streamovacích platformách.
+              {t.single.desc}
             </p>
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <a className="px-6 py-2.5 rounded-full bg-background/30 hover:bg-background/50 transition font-display text-spaced uppercase text-xs flex items-center gap-2"
@@ -173,7 +172,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             
-            <h2 className="font-display text-spaced text-4xl md:text-5xl mt-0 text-center">ČLENOVIA</h2>
+            <h2 className="font-display text-spaced text-4xl md:text-5xl mt-0 text-center">{t.members.title}</h2>
           </div>
 
           <ul className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-2 items-start">
@@ -195,7 +194,7 @@ const Index = () => {
                     <span key={i} className="block text-center mr-[50px] mt-0">{part}</span>
                   ))}
                 </p>
-                <p className="font-display italic text-sm md:text-base text-muted-foreground mt-2 -translate-x-3 mx-[50px] ml-0">{m.role}</p>
+                <p className="font-display italic text-sm md:text-base text-muted-foreground mt-2 -translate-x-3 mx-[50px] ml-0">{t.members.roles[m.role]}</p>
               </li>
             ))}
           </ul>
@@ -206,13 +205,13 @@ const Index = () => {
       <section id="podujatia" className="relative py-28">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">Koncerty</p>
-            <h2 className="font-display text-spaced text-4xl md:text-5xl">KDE NÁS UVIDÍTE</h2>
+            <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">{t.events.eyebrow}</p>
+            <h2 className="font-display text-spaced text-4xl md:text-5xl">{t.events.title}</h2>
           </div>
 
           {events.length === 0 ? (
             <p className="text-center font-display italic text-muted-foreground">
-              Termíny budú zverejnené čoskoro.
+              {t.events.empty}
             </p>
           ) : (
             <ul className="divide-y divide-border/60 border-y border-border/60">
@@ -237,8 +236,8 @@ const Index = () => {
       {/* KONTAKT */}
       <section id="kontakt" className="relative py-24 bg-primary">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">Spojte sa s nami</p>
-          <h2 className="font-display text-spaced text-4xl md:text-5xl mb-10">KONTAKT</h2>
+          <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">{t.contact.eyebrow}</p>
+          <h2 className="font-display text-spaced text-4xl md:text-5xl mb-10">{t.contact.title}</h2>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center font-display text-lg">
             <a href="mailto:info@eccejazz.sk" className="hover:text-primary-glow transition-colors">
               info@eccejazz.sk
@@ -258,7 +257,7 @@ const Index = () => {
             <MountainBadge size={48} />
             <div>
               <p className="font-display text-spaced uppercase text-sm">Ecce Jazz Band</p>
-              <p className="font-display italic text-xs text-muted-foreground">Slovenský jazz · od 2006</p>
+              <p className="font-display italic text-xs text-muted-foreground">{t.footer.tagline}</p>
             </div>
           </div>
           <a
