@@ -65,18 +65,18 @@ const Index = () => {
                style={{ background: "linear-gradient(225deg, hsl(217 50% 10% / 0.6), transparent)" }} />
         </div>
 
-        <nav className="relative max-w-6xl mx-auto px-6 pt-8 flex items-center justify-between">
+        <nav className="relative max-w-6xl mx-auto px-6 pt-8 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-3">
             <MountainBadge size={96} />
             <span className="font-display text-spaced text-sm uppercase">​</span>
           </div>
           <ul className="flex items-center gap-1 md:gap-2 font-display text-spaced uppercase text-sm md:text-base font-semibold rounded-full border border-primary-glow/30 bg-background-deep/60 backdrop-blur-md px-2 py-1.5 shadow-[var(--shadow-soft)]">
             {[
-              { href: "#top", label: "Domov" },
-              { href: "#kapela", label: "O nás" },
-              { href: "#clenovia", label: "Členovia" },
-              { href: "#podujatia", label: "Kalendár" },
-              { href: "#kontakt", label: "Kontakt" },
+              { href: "#top", label: t.nav.home },
+              { href: "#kapela", label: t.nav.about },
+              { href: "#clenovia", label: t.nav.members },
+              { href: "#podujatia", label: t.nav.events },
+              { href: "#kontakt", label: t.nav.contact },
             ].map((item) => (
               <li key={item.href}>
                 <a
@@ -88,6 +88,7 @@ const Index = () => {
               </li>
             ))}
           </ul>
+          <LanguageSwitcher />
         </nav>
 
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-32 text-center bg-inherit">
