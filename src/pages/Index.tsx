@@ -7,8 +7,11 @@ import jurajGriglak from "@/assets/juraj-griglak.webp";
 import elenaBodnarova from "@/assets/elena-bodnarova.webp";
 import peterSolarik from "@/assets/peter-solarik.webp";
 import { supabase } from "@/integrations/supabase/client";
+import { useT, LanguageSwitcher } from "@/lib/i18n";
 
-const members = [
+type RoleKey = "klavír" | "husle" | "kontrabas" | "spev" | "bicie";
+
+const members: Array<{ name: string; role: RoleKey; img: string; position?: string; nameParts?: string[] }> = [
   { name: "Pavol Bodnár", role: "klavír", img: pavolBodnar, position: "20% center" },
   { name: "Stanislav Palúch", role: "husle", img: stanislavPaluch },
   { name: "Juraj Griglák", role: "kontrabas", img: jurajGriglak },
