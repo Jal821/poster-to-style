@@ -205,13 +205,13 @@ const Index = () => {
       <section id="podujatia" className="relative py-28">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">Koncerty</p>
-            <h2 className="font-display text-spaced text-4xl md:text-5xl">KDE NÁS UVIDÍTE</h2>
+            <p className="font-display italic text-primary-glow mb-3 tracking-widest text-xs uppercase">{t.events.eyebrow}</p>
+            <h2 className="font-display text-spaced text-4xl md:text-5xl">{t.events.title}</h2>
           </div>
 
           {events.length === 0 ? (
             <p className="text-center font-display italic text-muted-foreground">
-              Termíny budú zverejnené čoskoro.
+              {t.events.empty}
             </p>
           ) : (
             <ul className="divide-y divide-border/60 border-y border-border/60">
