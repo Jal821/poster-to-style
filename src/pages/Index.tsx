@@ -70,7 +70,7 @@ const Index = () => {
             <MountainBadge size={96} />
             <span className="font-display text-spaced text-sm uppercase">​</span>
           </div>
-          <ul className="flex items-center gap-1 md:gap-2 font-display text-spaced uppercase text-sm md:text-base font-semibold rounded-full border border-primary-glow/30 bg-background-deep/60 backdrop-blur-md px-2 py-1.5 shadow-[var(--shadow-soft)]">
+          <ul className="order-3 md:order-none w-full md:w-auto overflow-x-auto no-scrollbar flex items-center gap-1 md:gap-2 font-display text-spaced uppercase text-xs md:text-base font-semibold rounded-full border border-primary-glow/30 bg-background-deep/60 backdrop-blur-md px-2 py-1.5 shadow-[var(--shadow-soft)]">
             {[
               { href: "#top", label: t.nav.home },
               { href: "#kapela", label: t.nav.about },
@@ -81,7 +81,7 @@ const Index = () => {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="block px-3 md:px-4 py-2 rounded-full text-foreground hover:bg-primary/30 hover:text-primary-glow transition-colors"
+                  className="block whitespace-nowrap px-2 md:px-4 py-1.5 md:py-2 rounded-full text-foreground hover:bg-primary/30 hover:text-primary-glow transition-colors"
                 >
                   {item.label}
                 </a>
@@ -95,7 +95,7 @@ const Index = () => {
           <p className="font-display italic text-primary-glow mb-6 tracking-widest text-sm uppercase">
             &nbsp;
           </p>
-          <h1 className="text-spaced text-5xl sm:text-7xl md:text-8xl leading-[1.05] text-center px-[10px] py-[10px] border-secondary border-solid shadow opacity-100 rounded-full pl-[20px] pt-[20px] pr-[20px] pb-[20px] my-0 mx-px mr-[50px] mb-[50px] ml-[50px] mt-[50px] bg-inherit border-0 font-extrabold font-serif">
+          <h1 className="text-spaced text-5xl sm:text-7xl md:text-8xl leading-[1.05] text-center border-secondary border-solid shadow opacity-100 rounded-full bg-inherit border-0 font-extrabold font-serif mx-2 my-6 p-3 sm:mx-12 sm:my-12 sm:p-5">
             ECCE JAZZ
             <span className="block mt-6 md:mt-10">BAND</span>
           </h1>
@@ -116,7 +116,7 @@ const Index = () => {
 
       {/* O KAPELE */}
       <section id="kapela" className="relative bg-primary mt-0 pt-[60px] py-[6px] pb-[82px] text-justify">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-[auto_1fr] gap-12 items-stretch text-center px-0">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[auto_1fr] gap-12 items-stretch text-center px-6 md:px-0">
           <img
             src={logo}
             alt="Ecce Jazz Band logo"
@@ -136,11 +136,11 @@ const Index = () => {
       {/* SINGEL */}
       <section id="singel" className="relative py-28">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="pill-teal px-10 py-12 md:px-16 md:py-14 text-center shadow-[var(--shadow-soft)]">
+          <div className="pill-teal px-6 py-10 md:px-16 md:py-14 text-center shadow-[var(--shadow-soft)]">
             <p className="font-display italic uppercase text-spaced text-xs mb-3 text-foreground/80">
               {t.single.eyebrow}
             </p>
-            <h2 className="font-display text-5xl md:text-7xl text-spaced">ZAHORAMI</h2>
+            <h2 className="font-display text-4xl md:text-7xl text-spaced">ZAHORAMI</h2>
             <p className="font-display italic text-xl mt-3 text-foreground/85">{t.single.year}</p>
             <p className="mt-6 font-body text-foreground/90 max-w-xl mx-auto">
               {t.single.desc}
@@ -189,12 +189,12 @@ const Index = () => {
                     className="w-full h-full object-cover skew-x-[14deg] scale-110 hover:scale-[1.18] transition-transform duration-700"
                   />
                 </div>
-                <p className="font-display text-spaced uppercase text-sm leading-tight -translate-x-3">
+                <p className="font-display text-spaced uppercase text-sm leading-tight">
                   {((m as any).nameParts ?? m.name.split(" ")).map((part: string, i: number) => (
-                    <span key={i} className="block text-center mr-[50px] mt-0">{part}</span>
+                    <span key={i} className="block text-center">{part}</span>
                   ))}
                 </p>
-                <p className="font-display italic text-sm md:text-base text-muted-foreground mt-2 -translate-x-3 mx-[50px] ml-0">{t.members.roles[m.role]}</p>
+                <p className="font-display italic text-sm md:text-base text-muted-foreground mt-2">{t.members.roles[m.role]}</p>
               </li>
             ))}
           </ul>
