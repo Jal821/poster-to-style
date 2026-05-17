@@ -81,7 +81,7 @@ const Index = () => {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="block px-3 md:px-4 py-2 rounded-full text-foreground hover:bg-primary/30 hover:text-primary-glow transition-colors"
+                  className="block whitespace-nowrap px-2 md:px-4 py-1.5 md:py-2 rounded-full text-foreground hover:bg-primary/30 hover:text-primary-glow transition-colors"
                 >
                   {item.label}
                 </a>
