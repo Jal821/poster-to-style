@@ -116,7 +116,7 @@ const Index = () => {
 
       {/* O KAPELE */}
       <section id="kapela" className="relative bg-primary mt-0 pt-[60px] py-[6px] pb-[82px] text-justify">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-[auto_1fr] gap-12 items-stretch text-center px-0">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[auto_1fr] gap-12 items-stretch text-center px-6 md:px-0">
           <img
             src={logo}
             alt="Ecce Jazz Band logo"
