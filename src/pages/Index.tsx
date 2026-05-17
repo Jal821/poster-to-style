@@ -136,11 +136,11 @@ const Index = () => {
       {/* SINGEL */}
       <section id="singel" className="relative py-28">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="pill-teal px-10 py-12 md:px-16 md:py-14 text-center shadow-[var(--shadow-soft)]">
+          <div className="pill-teal px-6 py-10 md:px-16 md:py-14 text-center shadow-[var(--shadow-soft)]">
             <p className="font-display italic uppercase text-spaced text-xs mb-3 text-foreground/80">
               {t.single.eyebrow}
             </p>
-            <h2 className="font-display text-5xl md:text-7xl text-spaced">ZAHORAMI</h2>
+            <h2 className="font-display text-4xl md:text-7xl text-spaced">ZAHORAMI</h2>
             <p className="font-display italic text-xl mt-3 text-foreground/85">{t.single.year}</p>
             <p className="mt-6 font-body text-foreground/90 max-w-xl mx-auto">
               {t.single.desc}
