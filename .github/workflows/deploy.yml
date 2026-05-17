@@ -5,6 +5,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write        # ← add this
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -12,7 +14,10 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+      - uses: peaceiris/actions-gh-pages@v4    # ← updated to v4 (v3 is deprecated)
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
