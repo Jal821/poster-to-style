@@ -70,7 +70,7 @@ const Index = () => {
             <MountainBadge size={96} />
             <span className="font-display text-spaced text-sm uppercase">​</span>
           </div>
-          <ul className="order-3 md:order-none w-full md:w-auto flex items-center justify-between md:justify-start gap-0 md:gap-2 font-display uppercase tracking-[0.08em] md:tracking-[0.32em] text-[11px] md:text-base font-semibold rounded-full border border-primary-glow/30 bg-background-deep/60 backdrop-blur-md px-2 py-1.5 shadow-[var(--shadow-soft)]">
+          <ul className="order-3 md:order-none w-full md:w-auto flex items-center justify-between md:justify-start gap-0 md:gap-2 font-display uppercase tracking-[0.06em] md:tracking-[0.32em] text-[11px] md:text-base font-semibold rounded-full border border-primary-glow/30 bg-background-deep/60 backdrop-blur-md px-3 md:px-2 py-1.5 shadow-[var(--shadow-soft)]">
             {[
               { href: "#top", label: t.nav.home },
               { href: "#kapela", label: t.nav.about },
